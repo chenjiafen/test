@@ -1,0 +1,23 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: test-platform
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.220.128:3306/autotest?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    username: root
+    password: 123456
+logging:
+  pattern:
+    #格式化，只能输出日期和内容
+    console: "%d - %msg%n"
+  path: test-platform/src/main/resources/log
+  file: test-platform/src/main/resources/log/test.log
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #解决属性名和数据不一致的驼峰命名法
+    call-setters-on-nulls: true # 调用setter null，返回空也必须设置到bean中（直接执行sql专用）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #日志输出sql
+
+
