@@ -17,7 +17,7 @@ public interface CaseDao extends BaseDao<Cases> {
      * @param id
      * @return
      */
-    Cases findById(@Param("id") int id);
+    Cases findById(@Param("id") Integer id);
 
     /**
      * 删除测试用例

@@ -5,8 +5,6 @@ public class Result {
     private Boolean flag;
     private String message;
     private Object data;
-
-
     public Result(){
 
     }

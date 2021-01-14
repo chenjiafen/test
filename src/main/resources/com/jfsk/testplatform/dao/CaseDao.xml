@@ -7,6 +7,8 @@
     <select id="findAll" resultType="com.jfsk.testplatform.entity.Cases">
       select * from cases
     </select>
-
+    <select id="findById" resultType="com.jfsk.testplatform.entity.Cases">
+      select * from cases where id=#{id}
+    </select>
 
 </mapper>
